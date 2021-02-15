@@ -1,7 +1,7 @@
 'use strict'; 
 
 let hourWork =['6am', '7am','8am', '9am','10am','11am','12pm','1pm','2pm','3pm','4pm','5pm','6pm','7pm'];
-let salesPerday=0;
+
 
 
 function getRandom(max, min) {
@@ -12,6 +12,7 @@ Name: 'Seattle',
 minCust:23,
 maxCust: 65, 
 AvgCookies: 6.3 ,
+salesPerday:0, 
 arrCustperhour:[],
 arrcookiesPerHour:[],
  generateCustomer:function(){
@@ -21,7 +22,8 @@ arrcookiesPerHour:[],
 },
 generateCookies:function(){
     for (let i = 0; i < hourWork.length; i++) {
-       this.arrcookiesPerHour.push(Math.floor(this.arrCustperhour[i] * this.AvgCookies)); 
+       this.arrcookiesPerHour.push(Math.floor(this.arrCustperhour[i] * this.AvgCookies));
+       this.salesPerday= this.salesPerday +  this.arrcookiesPerHour[i];
     }
    },
 
@@ -38,7 +40,7 @@ Render:function(){
     for (let i = 0; i < hourWork.length; i++) {
        let li=document.createElement('li');  
         li.textContent = ` ${hourWork[i]} : ${this.arrcookiesPerHour[i]} cookies` ;
-        this.salesPerday=this.salesPerday +  this.arrcookiesPerHour[i];
+        
          ul.appendChild(li);
     }
    let total=document.createElement('li');  
@@ -46,6 +48,7 @@ Render:function(){
    ul.appendChild(total);
 }
 };
+//Seattle.getRandom();
 Seattle.generateCustomer();
 Seattle.generateCookies();
 Seattle.Render();
@@ -60,6 +63,7 @@ function getRandom(max, min) {
  minCust: 3,
  maxCust: 24, 
  AvgCookies: 1.2 ,
+ salesPerday:0 ,
  arrCustperhour:[],
  arrcookiesPerHour:[],
   generateCustomer:function(){
@@ -109,6 +113,7 @@ function getRandom(max, min) {
  minCust: 11,
  maxCust: 38, 
  AvgCookies: 3.7 ,
+ salesPerday:0 ,
  arrCustperhour:[],
  arrcookiesPerHour:[],
   generateCustomer:function(){
@@ -157,6 +162,7 @@ function getRandom(max, min) {
  minCust: 20,
  maxCust: 38, 
  AvgCookies: 2.3 ,
+ salesPerday:0 ,
  arrCustperhour:[],
  arrcookiesPerHour:[],
   generateCustomer:function(){
@@ -206,6 +212,7 @@ function getRandom(max, min) {
  minCust: 20,
  maxCust: 38, 
  AvgCookies: 2.3 ,
+ salesPerday:0 ,
  arrCustperhour:[],
  arrcookiesPerHour:[],
   generateCustomer:function(){
