@@ -57,6 +57,8 @@ function headerRow() {
    tr.appendChild(dailyTotalCell);
    dailyTotalCell.textContent = 'Daily location total';
 
+  
+
 
 }
 
@@ -69,6 +71,8 @@ Location.prototype.Render = function () {
    let th = document.createElement('th');
    tr.appendChild(th);
    th.textContent = this.name;
+   
+
 
    let td;
    let total = 0;
@@ -110,6 +114,7 @@ function footerRow() {
          sum = sum + arrOfObjects[j].arrcookiesPerHour[i];
 
       }
+      let LocationNew=
      megaTotal = megaTotal + sum;
       th1 = document.createElement('th');
       tr.appendChild(th1);
@@ -138,6 +143,39 @@ footerRow();
 //lowerRow();
 
 
+
+const form = document.getElementById('Newlocation');
+
+form.addEventListener('submit', locationCreator);
+
+function locationCreator (event) {
+   event.preventDefault();
+    //console.log(event);
+
+    const LocationName = event.target.locationN.value;
+     //console.log(LocationName);
+
+     let  MiniCustomer=event.target.minCastt.value;
+
+     let  MaxCustomer=event.target.maxCastt.value;
+
+     let avargeNumber=event.target.Avg.value;
+ 
+   
+let newlocation = new Location (LocationName,MiniCustomer,MaxCustomer,avargeNumber);
+
+newlocation.Render();
+newlocation.generateCustomer();
+newlocation.generateCookies();
+ 
+}
+for (let x = 0; x < arr.length; x++) {
+  arr[x].generateCookies();
+  arr[x].generateCustomer();
+   arr[x].Render();
+
+   
+}
 
 
 
