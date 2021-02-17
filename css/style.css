@@ -10,3 +10,17 @@ th ,tr, td{
     width: 50px;
     height: 50px;
 }
+
+ .li1{ 
+     color: rgb(8, 8, 107);
+     font-size: larger;
+     
+     
+
+}
+  .op{
+      color: rgba(4, 13, 24, 0.349);
+      font-size: medium;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
