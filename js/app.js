@@ -159,7 +159,7 @@ let tokyo = new Location('Tokyo', 3, 24, 1.2);
 let dubai = new Location('Dubai', 11, 38, 3.7);
 let paris = new Location('Paris', 20, 38, 2.3);
 let lima = new Location('Lima', 2, 16, 4.6);
-let shops = [seattle,tokyo, dubai, paris, lima];
+shops = [seattle,tokyo, dubai, paris, lima];
 for(let k =0 ; k < shops.length; k++){
    shops[k].hourlyDailySales();
    shops[k].render();
