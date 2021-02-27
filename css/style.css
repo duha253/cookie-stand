@@ -1,10 +1,54 @@
 
 
-table{
+body table
+ {margin-left:330px;
+    border-style:solid;
+    color: a1cae2;
+    border-collapse: collapse;} 
+
+
+
+
+table th {border: 4.5px;
+    border-style:solid;
+    color :c2b092}
+
+
+body{
+     background-color:eae3c8 ;}
+a {min-height:10px ; 
+    color:c2b092;
+   font-size: 50px;
+   font-weight: bold;
+   margin-left:200;
+   margin-bottom: 100;
+   margin-top: 10;}
+
+header {background-color:c2b092;
+     min-height: 100;}
+
+form fieldset {width: 10cm;
+
+height: 6cm;
+margin-left:12cm ;
+background-color:rgb(53, 149, 187);}
+
+
+
+
+
+
+
+
+
+
+
+
+/*table{
 
     border: 2px solid black;
 
-}
+}*/
 
 
 
